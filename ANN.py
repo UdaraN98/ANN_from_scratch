@@ -3,16 +3,6 @@ import pandas as pd
 
 # creating a loss file to save losses
 lossFile = open("SumSquaredLossList.csv", "w")
-dftrain = pd.read_csv('winequalitytrain.csv')
-dftest = pd.read_csv('Winetest.csv')
-
-X = dftrain[['fixed acidity', 'volatile acidity','citric acid' ,'residual sugar', 'chlorides', 'free sulfur dioxide',
-             'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']]
-
-Y = dftrain[['Quality']]
-
-xPredict = dftest[['fixed acidity', 'volatile acidity', 'residual sugar', 'chlorides', 'free sulfur dioxide',
-                   'total sulfur dioxide', 'density', 'pH', 'sulphates', 'alcohol']]
 
 
 class ANN(object):
